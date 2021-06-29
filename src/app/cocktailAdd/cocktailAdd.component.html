@@ -1,0 +1,115 @@
+<nav>
+    <div class="back">
+        <div class="imgholder"></div>
+    </div>
+    <div class="newcocktail" (click)="changeState()">
+        <div class="text">
+            Cocktail
+        </div>
+    </div>
+    <div class="editIngredients" (click)="changeState()">
+        <div class="text">
+            Ingredients
+        </div>
+    </div>
+</nav>
+<ng-container *ngIf="cocktailCreationVisible">
+    <div class="container">
+        <div class="createCocktail">
+            <div class="add-name">
+                <div class="heading">
+                    Name:
+                </div>
+                <div class="nameInput">
+                    <input type="text" placeholder="Cocktail Name" maxlength="12" #cocktailName/>
+                </div>
+            </div>
+    
+            <div class="add-category">
+                <div class="heading">
+                    Category:
+                </div>
+                <div class="categoryInput">
+                    <input type="text" placeholder="Category" maxlength="12" #cocktailCatergory/>
+                </div>
+            </div>
+    
+            <ng-container *ngFor="let item of CocktailIngredients">
+                <div class="item">
+                    <div class="heading">{{item}}(ml):</div>
+                    <div class="valueInput">
+                        <input type="text" placeholder="Value" (focusout)="updateValues(item, $event)" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" maxlength="3"/>
+                    </div>
+                </div>
+            </ng-container>
+    
+            <div class="addToDb">
+                <button (click)="postCocktailCreation(cocktailName.value, cocktailCatergory.value)">Create Cocktail</button>
+            </div>
+        </div>
+        <div class="editCocktailIngredients">
+    
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="ingredientEditVisible">
+    <div class="ingredientContainer">
+        <div class="header">
+            <div class="spacer"></div>
+            <div class="new" (click)="openNew()">
+                <div class="text">
+                    New Ingredient
+                </div>
+            </div>
+
+            <div class="delete" (click)="openDelete()">
+                <div class="text">
+                    Delete Ingredient
+                </div>
+            </div>
+        </div>
+
+        <ng-container *ngIf="ingredientEditNew">
+            <div class="newIngredient">
+                <div class="spacer"></div>
+                <div class="new-text">
+                    New Ingredient:
+                </div>
+                <div class="new-input">
+                    <input type="text" placeholder="Name" id="kekw1" #newIngredientName/>
+                </div>
+            </div>
+
+            <div class="newIngredient">
+                <div class="spacer"></div>
+                <div class="new-text">
+                    Slot:
+                </div>
+                <div class="new-input">
+                    <input type="text" placeholder="Name" id="kekw2" #newIngredientSlot/>
+                </div>
+            </div>
+
+            <div class="addbutton">
+                <button (click)="addIngredient(newIngredientName.value, newIngredientSlot.value)">Add Ingredient</button>
+            </div>
+        </ng-container>
+
+        <ng-container *ngIf="!ingredientEditNew">
+            <div class="deleteContainer">
+                <ng-container *ngFor="let item of CocktailIngredients">
+                    <div class="deleteItemContainer">
+                        <div class="spacer"></div>
+                        <div class="deleteName">
+                            {{item}}
+                        </div>
+                        <div class="deleteButton">
+                            <button (click)="deleteIngredient(item)">Delete</button>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </ng-container>
+    </div>
+</ng-container>

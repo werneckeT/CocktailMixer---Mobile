@@ -1,0 +1,45 @@
+<div class="global-container">
+    <nav>
+        <div class="back">
+            <div class="imgholder">
+                    
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <ng-container *ngFor="let item of queueArray">
+            <div class="item">
+                <div class="heading">
+                    <!--Border bottom-->
+                    <div class="text">
+                        {{item.cocktailName}}
+                    </div>
+                </div>
+                <div class="id">
+                    ID: {{item.cocktailID}}
+                </div>
+                <div class="category">
+                    {{item.cocktailCategory}}
+                </div>
+                <div class="ingredients">
+                    <!--Todo: Get ingredients and split them-->
+                    <ul>
+                        <li>Reis</li>
+                        <li>Wasser</li>
+                        <li>Reis</li>
+                        <li>Wasser</li>
+                        <li>Reis</li>
+                        <li>Wasser</li>
+                        <li>Reis</li>
+                        <li>Wasser</li>
+                        <li>Reis</li>
+                    </ul>
+                </div>
+                <div class="add-again">
+                    <button (click)="deleteCocktail(item.cocktailID)">Delete</button>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

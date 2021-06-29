@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+nav {
+    width: 100%;
+    height: 5em;
+    min-height: 50px;
+    background: #202020;
+    position: fixed;
+    height: 0;
+    z-index: 1;
+}
+
+.settings {
+    position: initial;
+    vertical-align: middle;
+    justify-self: center;
+    height: 90%;
+    width: 15vw;
+    background-image: url('../assets/whitecocktail.png');
+    margin-left: 5%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    display: inline-block;
+}
+
+.searchbar {
+    height: 100%;
+    width: 60%;
+    margin-top: 3%;
+    float: right;
+    display: inline-block;
+}
+
+.searchkekw {
+    width: 90%;
+    height: 60%;
+    color: #9f9f9f;
+    font-family: 'Roboto Mono', monospace;
+    background: transparent;
+    border: 1px solid #444;
+    border-radius: 5px;;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+.searchkekw::placeholder {
+    font-family: 'Roboto Mono', monospace;
+    margin-left: 5%;
+}
+.searchkekw:hover, .searchkekw:focus {
+    border: 1.5px solid #666;
+    outline: transparent;
+    background: transparent;
+  }
+
+.container {
+    padding-top: 5em;
+    width: 90%;
+    height: 75%;
+    margin-bottom: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: auto;
+}
+.itemclass {
+    height: 9em;
+
+    /*
+    
+    overflow: auto;
+    white-space: nowrap;
+
+    */
+}
+.perfectContainer {
+    overflow: auto;
+    white-space: nowrap;
+}
+.itemclassname {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    font-size: 3vh;
+    padding-bottom: 5px;
+}
+.item-name {
+    position: relative;
+    height: 75px;
+    width: 134px;
+    vertical-align: middle;
+    text-align: center;
+    justify-content: center;
+    background-size: 100% 100%;
+    margin-left: 20px;
+    -webkit-box-shadow: 10px 10px 38px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 38px -6px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 38px -6px rgba(0,0,0,0.75);
+    border-radius: 5px;
+}
+.item:last-child {
+    margin-right: 20px;
+}
+.item {
+    padding: 10px 0 10px 0;
+    display: inline-block;
+}
+.item-container:first-child {
+    margin-left: 0px;
+}
+
+.footer {
+    position: fixed;
+    height: 15%;
+    bottom: 0;
+    width: 100%;
+    background: #202020;
+}
+.CocktailAdd {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+.CocktailQueue {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+
+}
+.CocktailAdd .imgholder {
+    width: 50%;
+    height: 50%;
+    margin: 12.5% 25% 12.5% 25%;
+    background-image: url('../assets/addCocktailWhite.ico');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+.CocktailQueue .imgholder {
+    width: 50%;
+    height: 50%;
+    margin: 12.5% 25% 12.5% 25%;
+    background-image: url('../assets/listItemWhite.ico');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+cocktailQueue {
+    width: 100%;
+    height: 100%;
+}
+.cocktailShow {
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    .nav {
+        width: 100%;
+        height: 5em;
+        min-height: 50px;
+        background: #202020;
+        position: fixed;
+        height: 0;
+        z-index: 1;
+
+        .back {
+            width: 25%;
+            height: 100%;
+        
+            .imgholder {
+                margin: 6.25% 0 12.5% 6.25%;
+                height: 75%;
+                width: 75%;
+                background-image: url('../assets/backWhite.ico');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
+        }
+    }
+
+    .contentContainer {
+        padding-top: 15%;
+        height: 85%;
+        width: 100%;
+
+        .secondContainer {
+            width: 70%;
+            height: 80%;
+            background: #2b2b2b;
+            border-radius: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 15%;
+            -webkit-box-shadow: 30px 30px 100px -25px rgba(0,0,0,1);
+            -moz-box-shadow: 30px 30px 100px -25px rgba(0,0,0,1);
+            box-shadow: 30px 30px 100px -25px rgba(0,0,0,1);
+        }
+
+        .contentName {
+            width: 100%;
+            height: 20%;
+            text-align: center;
+            border-bottom: 1px solid #202020;
+
+            .text {
+                font-size: 5vh;
+                padding-top: 25px;
+                font-family: 'Roboto Mono', monospace;
+            }
+
+            .text::first-letter {
+                text-transform: uppercase;
+            }
+        }
+
+        .counter {
+            width: 100%;
+            height: 13.5%;
+            border-bottom: 1px solid #202020;
+
+            .text {
+                font-size: 3vh;
+                padding-top: 20px;
+                font-family: 'Roboto Mono', monospace;
+                text-align: center;
+                color: #E06060;
+            }
+        }
+        
+        .ingredientCont {
+            margin-top: 5%;
+            width: 70%;
+            height: 40%;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 2.5vh;
+            overflow: auto;
+
+            .containerIngredient {
+                width: 50%;
+                float: left;
+                text-align: center;
+            }
+
+            .containerIngredient::first-letter {
+                text-transform: uppercase;
+            }
+
+            .ingredientAmount {
+                width: 50%;
+                float: right;
+                text-align: center;
+            }
+        }
+    }
+
+    .addToQueue {
+        width: 100%;
+        margin-top: 5%;
+        height: 12.5%;
+        border-top: 1px solid #202020;
+
+        button {
+            margin-top: 8%;
+            height: 70%;
+            width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+            bottom: 50px;
+            border: none;
+            background: #E06060;
+            border-radius: 2px;
+            color: #fff;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1em;
+            -webkit-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
+            box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
+        }
+    }
+}

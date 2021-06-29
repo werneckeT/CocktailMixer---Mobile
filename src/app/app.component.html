@@ -1,0 +1,105 @@
+<ng-container *ngIf="listVisible">
+    <cocktailQueue>
+
+    </cocktailQueue>
+</ng-container>
+
+<ng-container *ngIf="addVisible">
+  <cocktailAdd>
+
+  </cocktailAdd>
+</ng-container>
+
+<ng-container *ngIf="!listVisible && !addVisible">
+  <ng-container *ngIf="mainScreen">
+    <nav>
+      <div class="settings">
+        <!--<img src="../assets/whitecocktail.png"/> -->
+      </div>
+      <div class="searchbar">
+        <input class="searchkekw" type="search" name="searchbar" id="searchbar" placeholder="Search..."/>
+      </div>
+    </nav>
+  
+    <div class="container">
+      <ng-container *ngFor="let item of cocktailCategories">    
+        <div class="itemclass">
+          <div class="itemclassname">
+            {{item.name}}
+          </div>
+  
+          <div class="perfectContainer">
+            <ng-container *ngFor="let cockailItem of item.items">
+              <div class="item">
+                <div class="item-container">
+                  <div class="item-name" (click)="openCocktail(cockailItem._cocktail_name)" style="background-image: url('https://img.fotocommunity.com/neue-wege-gehen-f09afde0-8ce2-4f59-ad40-56c397a290a8.jpg?width=1000');">
+                    {{cockailItem._cocktail_name}}
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+  
+        </div>
+      </ng-container>
+    </div>
+  
+  
+    <div class="footer">
+      <div class="CocktailAdd">
+        <div class="imgholder" (click)="openAdd()">
+  
+        </div>
+      </div>
+      
+      <div class="CocktailQueue">
+        <div class="imgholder" (click)="openList()">
+          
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="!mainScreen">
+    <div class="cocktailShow">
+        <div class="nav">
+          <div class="back">
+              <div class="imgholder">
+                      
+              </div>
+          </div>
+        </div>
+
+        <div class="contentContainer">
+          <div class="secondContainer">
+            <div class="contentName">
+              <div class="text">
+                {{currentDetailCocktail.name}}
+              </div>
+            </div>
+            <div class="counter">
+              <div class="text">
+                Counter: null
+              </div>
+            </div>
+            <div class="ingredientCont">
+              <ng-container *ngFor="let ingr of currentDetailCocktail.ingredients">
+                <div class="containerIngredient">
+                  {{ingr.ingredient_name}}
+                </div>
+  
+                <div class="ingredientAmount">
+                  {{ingr.ingredient_amount}} ml
+                </div>
+              </ng-container>
+            </div>
+            <div class="addToQueue">
+              <button (click)="newCocktail(currentDetailCocktail.name)">Add To Queue</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+  </ng-container>
+
+</ng-container>

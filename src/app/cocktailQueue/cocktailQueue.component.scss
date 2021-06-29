@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@500&display=swap');
+.global-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+nav {
+    width: 100%;
+    height: 5em;
+    min-height: 50px;
+    background: #202020;
+    position: fixed;
+    height: 0;
+    z-index: 1;
+}
+.imgholder {
+    position: relative;
+}
+.back {
+    width: 25%;
+    height: 100%;
+}
+.back .imgholder {
+    margin: 6.25% 0 12.5% 6.25%;
+    height: 75%;
+    width: 75%;
+    background-image: url('../../assets/backWhite.ico');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.container {
+    padding-top: 5em;
+    color: #fff;
+    width: 100%;
+    height: 80%;
+    white-space: nowrap;
+}
+.item {
+    margin-top: 3em;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    height: 70%;
+    width: 50%;
+    background: #2b2b2b;
+    display: inline-block;
+    -webkit-box-shadow: 30px 30px 100px -25px rgba(0,0,0,1);
+    -moz-box-shadow: 30px 30px 100px -25px rgba(0,0,0,1);
+    box-shadow: 30px 30px 100px -25px rgba(0,0,0,1);
+
+    .heading {
+        height: 3em;
+        width: 100%;
+        text-align: center;
+        vertical-align: middle;
+        border-bottom: 1px solid #202020;
+        .text {
+            font-family: 'Roboto', sans-serif;
+            padding-top: 0.5em;
+            text-transform: uppercase;
+            font-size: 3.5vh;
+            letter-spacing: 1.5px;
+        }
+    }
+    .id {
+        font-family: 'Roboto Mono', monospace;
+        padding-top: 1em;
+        width: 100%;
+        text-align: center;
+        color: rgb(255, 62, 62);
+    }
+    .category {
+        font-family: 'Roboto Mono', monospace;
+        font-size: 90%;
+        padding-top: 0.75em;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 1em;
+        border-bottom: 1px solid #202020;
+    }
+    .ingredients {
+        padding-top: 0.5em;
+        width: 100%;
+        height: auto;
+        height: 40%;
+        overflow-y: auto;
+        ul {
+            font-family: 'Roboto Mono', monospace;
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .add-again{
+        width: 100%;
+        height: auto;
+        padding-top: 1.5em;
+        button {
+            height: 2em;
+            width: 70%;
+            margin-left: 15%;
+            margin-right: 15%;
+            background: #E06060;
+            border-radius: 2px;
+            color: #fff;
+            font-weight: bold;
+            -webkit-appearance: button;
+            cursor: pointer;
+            border: none;
+        }
+    }
+}
+.item:hover {
+    background: #161616;
+}
+.item:first-child {
+    margin-left: 20px;
+}
+.item:last-child {
+    margin-right: 20px;
+}

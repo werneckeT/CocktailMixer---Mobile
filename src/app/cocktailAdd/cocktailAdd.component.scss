@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@500&display=swap');
+
+nav {
+    width: 100%;
+    height: 5em;
+    min-height: 50px;
+    background: #1d1d1d;
+    position: fixed;
+    height: 0;
+    z-index: 1;
+    display: inline-block;
+    color: #fff;
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(18,18,18,1);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(18,18,18,1);
+    box-shadow: 0px 5px 10px 0px rgba(18,18,18,1);
+}
+.imgholder {
+    position: relative;
+}
+.back {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+.back .imgholder {
+    margin: 6.25% 0 12.5% 6.25%;
+    height: 75%;
+    width: 75%;
+    background-image: url('../../assets/backWhite.ico');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.container {
+    height: 90%;
+    width: 100%;
+    padding-top: 3em;
+}
+.newcocktail {
+    vertical-align: middle;
+    text-align: center;
+    width: 30%;
+    float: left;
+    height: 100%;
+
+    .text {
+        padding-top: 1em;
+        font-family: 'Roboto Mono', monospace;
+        color: #E06060;
+    }
+}
+.editIngredients {
+    vertical-align: middle;
+    text-align: center;
+    width: 37.5%;
+    float: left;
+    height: 100%;
+
+    .text {
+        padding-top: 1em;
+        font-family: 'Roboto Mono', monospace;
+        color: #E06060;
+    }
+}
+.createCocktail {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    .heading {
+        display: inline-block;
+    }
+    .add-name, .add-category {
+        height: 5%;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        color: #fff;
+        font-family: 'Roboto Mono', monospace;
+        .nameInput, .categoryInput{
+            display: inline-block;
+            float: right;
+        }
+        .heading::first-letter {
+            text-transform: uppercase;
+        }
+    }
+    .add-name {
+        padding-top: 20px;
+    }
+    .add-category {
+        padding-bottom: 50px;
+    }
+    
+}
+.editCocktailIngredients {
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: yellow;
+}
+.item {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 5%;
+    color: #fff;
+    font-family: 'Roboto Mono', monospace;
+
+    .heading::first-letter {
+        text-transform: uppercase;
+    }
+    .valueInput {
+        float: right;
+        display: inline-block;
+    }
+}
+input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid grey;
+    color: #fff;
+    float: right;
+    width: 70%;
+    padding-left: 2px;
+}
+input::placeholder {
+    font-family: 'Roboto Mono', monospace;
+}
+.addToDb {
+    position: fixed;
+    bottom: 0;
+    height: 15%;
+    width: 100%;
+    background: #1d1d1d;
+    -webkit-box-shadow: 0px -5px 10px 0px rgba(18,18,18,1);
+    -moz-box-shadow: 0px -5px 10px 0px rgba(18,18,18,1);
+    box-shadow: 0px -5px 10px 0px rgba(18,18,18,1);
+
+    button {
+        margin-top: 20px;
+        height: 50%;
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        bottom: 50px;
+        border: none;
+        background: #E06060;
+        border-radius: 2px;
+        color: #fff;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 1em;
+        -webkit-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
+    }
+}
+.ingredientContainer {
+    height: 90%;
+    width: 100%;
+    padding-top: 3em;
+
+    .header {
+        width: 100%;
+        height: 10%;
+        position: fixed;
+        //border-bottom: 1px solid grey;
+        border-bottom: 1px solid #2d2d2d;
+
+        .spacer {
+            width: 25%;
+            height: 100%;
+            float: left;
+        }
+        .new {
+            width: 30%;
+            height: 100%;
+            float: left;
+        }
+        .delete {
+            width: 37.5%;
+            height: 100%;
+            float: left;
+        }
+        .text {
+            text-align: center;
+            color: #E06060;
+            font-family: 'Roboto Mono', monospace;
+            padding-top: 0.35em;
+        }
+    }
+    .newIngredient {
+        margin-top: 30%;
+        height: 5%;
+        width: 100%;
+        .spacer {
+            width: 25%;
+            height: 20%;
+            float: left;
+        }
+        .new-text{
+            width: 30%;
+            float: left;
+            font-family: 'Roboto Mono', monospace;
+            color: #fff;
+            text-align: center;
+        }
+        .new-input {
+            width: 37.5%;
+            margin-left: auto;
+            margin-right: auto;
+            float: left;
+        }
+        input {
+            margin-top: 1em;
+            float: right;
+            margin-right: 1em;
+            width: 60%;
+        }
+    }
+}
+.addbutton {
+    position: fixed;
+    bottom: 0;
+    height: 15%;
+    width: 100%;
+    background: #1d1d1d;
+    -webkit-box-shadow: 0px -5px 10px 0px rgba(18,18,18,1);
+    -moz-box-shadow: 0px -5px 10px 0px rgba(18,18,18,1);
+    box-shadow: 0px -5px 10px 0px rgba(18,18,18,1);
+    
+    button {
+        margin-top: 20px;
+        height: 50%;
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        bottom: 50px;
+        border: none;
+        background: #E06060;
+        border-radius: 2px;
+        color: #fff;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 1em;
+        -webkit-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
+    }   
+}
+.deleteContainer {
+    margin-top: 25%;
+    width: 100%;
+    height: 70%;
+    overflow: auto;
+
+    .deleteItemContainer {
+        width: 100%;
+        height: 40px;
+        .spacer {
+            width: 25%;
+            display: inline-block;
+        }
+        .deleteName {
+            width: 35%;
+            display: inline-block;
+            color: #fff;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9em;
+        }
+        .deleteName::first-letter {
+            text-transform: uppercase;
+        }
+        .deleteButton {
+            width: 37.5%;
+            display: inline-block;
+
+            button {
+                margin-left: 10%;
+                width: 60%;
+                border: none;
+                font-family: 'Roboto Mono', monospace;
+                padding: 2px 5px 2px 5px;
+                background: #E06060;
+                border-radius: 2px;
+                color: #fff;
+            }
+        }
+    }
+}
